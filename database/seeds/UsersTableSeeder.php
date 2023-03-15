@@ -7,16 +7,11 @@ class UsersTableSeeder extends Seeder
 {
     public function run()
     {
-        $users = [
-            [
-                'id'             => 1,
-                'name'           => 'Admin',
-                'email'          => 'admin@admin.com',
-                'password'       => bcrypt('password'),
-                'remember_token' => null,
-            ],
-        ];
-
-        User::insert($users);
+        User::Create([
+            'name' => "Admin",
+            'email' => "admin@onesttech.com",
+            'email_verified_at' => now(),
+            'password' => Hash::make('12345678'),
+        ]);
     }
 }
