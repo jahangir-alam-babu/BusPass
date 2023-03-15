@@ -9,7 +9,7 @@ class UsersTableSeeder extends Seeder
     {
         User::Create([
             'name' => "Admin",
-            'email' => "admin@onesttech.com",
+            'email' => "admin@demo.com",
             'email_verified_at' => now(),
             'password' => Hash::make('12345678'),
         ]);
